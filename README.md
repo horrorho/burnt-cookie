@@ -1,4 +1,4 @@
-# burnt-cookie
+# Horrorho's Burnt Cookie
 Rust based Apple Cookies.binarycookies to Netscape cookie file format conversion.
 
 ##What is it?
