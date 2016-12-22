@@ -40,7 +40,7 @@ Pipe to cookies.txt:
 ```
 $ burntcookie Cookies.binarycookies > cookies.txt
 ```
-\#HttpOnly\_ prefixes are not appended by default. Use the -h/ --http-only switch:
+\#HttpOnly\_ prefixes are not prepended by default. Use the -h/ --http-only switch:
 ```
 $ burntcookie -h Cookies.binarycookies > cookies.txt
 ```
