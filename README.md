@@ -15,7 +15,7 @@ Requires [Rust](https://www.rust-lang.org).
 The executable is located at: `/target/release/`
 ```
 ~/burnt-cookie-master $ ./target/release/burntcookie --help
-Usage: cookies [OPTION]... [FILE]...
+Usage: burntcookie [OPTION]... [FILE]...
 Parses Apple binary cookie file/s into their Netscape equivalent/s.
 With no FILE, read standard input.
 
@@ -23,6 +23,10 @@ Options:
         --help          display this help and exit
     -h, --http_only     use #HttpOnly_ prefix
 
+Example:
+burntcookie Cookies.binarycookies > cookies.txt		Parse into cookies.txt
+
+Project home: http://github.com/horrorho/burnt-cookie
 ```
 
 ##Usage
