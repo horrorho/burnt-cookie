@@ -35,10 +35,7 @@ use std::fs::File;
 use std::io;
 use std::io::Write;
 use std::path::Path;
-
-use getopts::Matches;
-use getopts::Options;
-
+use getopts::{ Options, Matches };
 use cookies::Cookies;
 
 fn main() {
