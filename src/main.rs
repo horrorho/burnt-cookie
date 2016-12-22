@@ -65,9 +65,15 @@ fn args() -> Option<Matches> {
         .ok()
         .and_then(|matches|
             if matches.opt_present("help") {
-                println!("Usage: cookies [OPTION]... [FILE]...");
+                println!("Usage: burntcookie [OPTION]... [FILE]...");
                 println!("Parses Apple binary cookie file/s into their Netscape equivalent/s.");
                 println!("{}", opts.usage("With no FILE, read standard input."));
+                println!("Example:");
+                println!("burntcookie Cookies.binarycookies > cookies.txt\t\t\
+                          Parse into cookies.txt");
+                println!("");
+                println!("Project home: http://github.com/horrorho/burnt-cookie");
+
                 None
             } else {
                 Some(matches)
