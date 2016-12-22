@@ -68,9 +68,11 @@ fn args() -> Option<Matches> {
                 println!("Usage: burntcookie [OPTION]... [FILE]...");
                 println!("Parses Apple binary cookie file/s into their Netscape equivalent/s.");
                 println!("{}", opts.usage("With no FILE, read standard input."));
-                println!("Example:");
+                println!("Examples:");
                 println!("burntcookie Cookies.binarycookies > cookies.txt\t\t\
                           Parse into cookies.txt");
+                println!("RUST_LOG=WARN burntcookie Cookies.binarycookies\t\t\
+                          With warnings");
                 println!("");
                 println!("Project home: http://github.com/horrorho/burnt-cookie");
 
