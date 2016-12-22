@@ -73,7 +73,7 @@ $ burntcookie Cookies.binarycookies > cookies.txt
 ```
 $ burntcookie -h Cookies.binarycookies > cookies.txt
 ```
-Temporary .dat files are also parseable, although they may generate warnings (supressed by default):
+Temporary .dat files are also parseable although they may generate warnings (supressed by default):
 ```
 $ burntcookie Cookies.binarycookies_tmp_1234_0.dat > cookies.txt
 ```
