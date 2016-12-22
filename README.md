@@ -63,23 +63,23 @@ Project home: http://github.com/horrorho/burnt-cookie
 
 Convert a Cookies.binarycookies file:
 ```
-$ burntcookie Cookies.binarycookies
+burntcookie Cookies.binarycookies
 ```
 Pipe to cookies.txt:
 ```
-$ burntcookie Cookies.binarycookies > cookies.txt
+burntcookie Cookies.binarycookies > cookies.txt
 ```
 \#HttpOnly\_ prefixes are not prepended by default. Use the -h/ --http-only switch:
 ```
-$ burntcookie -h Cookies.binarycookies > cookies.txt
+burntcookie -h Cookies.binarycookies > cookies.txt
 ```
 Temporary .dat files are also parseable although they may generate warnings (supressed by default):
 ```
-$ burntcookie Cookies.binarycookies_tmp_1234_0.dat > cookies.txt
+burntcookie Cookies.binarycookies_tmp_1234_0.dat > cookies.txt
 ```
 Enable warning output.
 ```
-$ RUST_LOG=WARN burntcookie Cookies.binarycookies_tmp_1234_0.dat > cookies.txt
+RUST_LOG=WARN burntcookie Cookies.binarycookies_tmp_1234_0.dat > cookies.txt
 ```
 
 ##Why Rust?
