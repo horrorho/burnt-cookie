@@ -23,8 +23,9 @@ Options:
         --help          display this help and exit
     -h, --http_only     use #HttpOnly_ prefix
 
-Example:
+Examples:
 burntcookie Cookies.binarycookies > cookies.txt		Parse into cookies.txt
+RUST_LOG=WARN burntcookie Cookies.binarycookies		With warnings
 
 Project home: http://github.com/horrorho/burnt-cookie
 ```
