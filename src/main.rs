@@ -22,8 +22,10 @@
  THE SOFTWARE.
  */
 
-#[macro_use]
-extern crate log;
+#![cfg_attr(feature="clippy", feature(plugin))]
+#![cfg_attr(feature="clippy", plugin(clippy))]
+
+#[macro_use] extern crate log;
 extern crate env_logger;
 extern crate byteorder;
 extern crate getopts;
@@ -47,7 +49,7 @@ fn main() {
         let files = &matches.free;
         let http_only = matches.opt_present("http_only");
         let parser = Cookies::new(http_only);
-        process(&files, parser);
+        process(files, parser);
     }
 }
 

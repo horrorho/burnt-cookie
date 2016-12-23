@@ -53,7 +53,7 @@ impl Cookies {
         parse_table::<BigEndian>(&bs[8..], count)?
             .iter()
             .fold(count * 4 + 8, |off, &len| {
-                slice(&bs, off, len)
+                slice(bs, off, len)
                     .and_then(|u| self.parse_page(u))
                     .unwrap_or_else(|err| warn!("page parse failure: {}", err));
                 off + len});
@@ -100,7 +100,7 @@ impl Cookies {
         let path  = slice_to(bs, path_off,  value_off).and_then(&c_str)?;
         let value = slice_to(bs, value_off, bs.len() ).and_then(&c_str)?;
 
-        let is_raw = url.starts_with(".");
+        let is_raw = url.starts_with('.');
 
         let is_secure    = flags & 0x01 == 0x01;
         let is_http_only = flags & 0x04 == 0x04;
@@ -145,7 +145,7 @@ fn slice_to(bs: &[u8], off: usize, to: usize) -> io::Result<&[u8]> {
 
 fn c_str(bs: &[u8]) -> io::Result<String> {
     bs.split_last()
-        .ok_or(Error::new(ErrorKind::InvalidData, "null c string"))
+        .ok_or_else(|| Error::new(ErrorKind::InvalidData, "null c string"))
         .and_then(|(&last, elements)|
             if last == 0x00 {
                 Ok(elements)
