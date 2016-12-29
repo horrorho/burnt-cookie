@@ -1,5 +1,5 @@
 # Burnt Cookie
-Horrorhos' Burnt Cookie.
+Horrorho's Burnt Cookie.
 
 ##What is it?
 Parses Apple binary cookie file/s into their Netscape equivalent/s. These Netscape cookie files are easily imported into web browsers or can be used with compatible tools like [curl](https://curl.haxx.se/).
