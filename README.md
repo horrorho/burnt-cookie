@@ -1,7 +1,7 @@
 # Burnt Cookie
 Horrorho's Burnt Cookie.
 
-##What is it?
+## What is it?
 Parses Apple binary cookie file/s into their Netscape equivalent/s. These Netscape cookie files are easily imported into web browsers or can be used with compatible tools like [curl](https://curl.haxx.se/).
 
 Illustrative example:
@@ -33,7 +33,7 @@ $ curl -v -b cookies.txt http://www.example.com > response.txt
 > Cookie: MOOMOO=2534780572345.54354351154; __meow=423e5ab398aa342f; __oink=1; __woof=434543.435434
 ```
 
-##Build
+## Build
 Requires [Rust](https://www.rust-lang.org).
 
 [Download](https://github.com/horrorho/burnt-cookie/archive/master.zip), extract and navigate to the burnt-cookie-master folder:
@@ -59,7 +59,7 @@ RUST_LOG=WARN burntcookie Cookies.binarycookies		With warnings
 Project home: http://github.com/horrorho/burnt-cookie
 ```
 
-##Usage
+## Usage
 
 Convert a Cookies.binarycookies file:
 ```
@@ -82,10 +82,10 @@ Enable warning output.
 RUST_LOG=WARN burntcookie Cookies.binarycookies_tmp_1234_0.dat > cookies.txt
 ```
 
-##Why Rust?
+## Why Rust?
 This project is largely an exercise in Rust programming. It's a conversion of a private tool I created a while back.
 
-##Useful links
+## Useful links
 HTTP cookie: https://en.wikipedia.org/wiki/HTTP_cookie
 
 Safari/iOS - Cookies.binarycookies reader: http://www.securitylearn.net/2012/10/27/cookies-binarycookies-reader/
